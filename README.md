@@ -18,7 +18,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
 
 ### *DIM_Calendar:*
 
-```SQL
+<!-- ```SQL
     SELECT 
         [DateKey], 
         [FullDateAlternateKey] AS Date, 
@@ -32,7 +32,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
         [AdventureWorksDW2019].[dbo].[DimDate]
     WHERE 
         CalendarYear >= 2019
-```
+``` -->
 
 ### *DIM_Customers:*
 
