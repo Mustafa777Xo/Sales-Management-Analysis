@@ -50,6 +50,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
         ORDER BY 
             CustomerKey ASC -- Ordered List by CustomerKey
 ```
+
 ### *Dim_Products:* 
     ```SQL
         SELECT 
@@ -71,6 +72,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
         order by 
             p.ProductKey asc
 ```
+
 ### *Fact_InternetSales:*
     ```SQL
         SELECT 
