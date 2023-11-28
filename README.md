@@ -19,17 +19,32 @@ Below are the SQL statements for cleansing and transforming necessary data.
 ### *DIM_Calendar:*
 
 ```SQL
-SELECT 
-  [DateKey], 
-  [FullDateAlternateKey] AS Date, 
-  [EnglishDayNameOfWeek] AS Day, 
-  [EnglishMonthName] AS Month, 
-  Left([EnglishMonthName], 3) AS MonthShort,   -- Useful for front end date navigation and front end graphs.
-  [MonthNumberOfYear] AS MonthNo, 
-  [CalendarQuarter] AS Quarter, 
-  [CalendarYear] AS Year
-FROM 
- [AdventureWorksDW2019].[dbo].[DimDate]
-WHERE 
-  CalendarYear >= 2019
+    SELECT 
+        [DateKey], 
+        [FullDateAlternateKey] AS Date, 
+        [EnglishDayNameOfWeek] AS Day, 
+        [EnglishMonthName] AS Month, 
+        Left([EnglishMonthName], 3) AS MonthShort,   -- Useful for front end date navigation and front end graphs.
+        [MonthNumberOfYear] AS MonthNo, 
+        [CalendarQuarter] AS Quarter, 
+        [CalendarYear] AS Year
+        FROM 
+        [AdventureWorksDW2019].[dbo].[DimDate]
+        WHERE 
+        CalendarYear >= 2019```
 
+### *DIM_Customers:*
+    ```SQL
+        SELECT 
+            c.customerkey AS CustomerKey, 
+            c.firstname AS [First Name], 
+            c.lastname AS [Last Name], 
+            c.firstname + ' ' + lastname AS [Full Name], 
+            CASE c.gender WHEN 'M' THEN 'Male' WHEN 'F' THEN 'Female' END AS Gender,
+            c.datefirstpurchase AS DateFirstPurchase, 
+            g.city AS [Customer City] -- Joined in Customer City from Geography Table
+            FROM 
+            [AdventureWorksDW2022].[dbo].[DimCustomer] as c
+            LEFT JOIN dbo.dimgeography AS g ON g.geographykey = c.geographykey 
+            ORDER BY 
+            CustomerKey ASC -- Ordered List by CustomerKey
