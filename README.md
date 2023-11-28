@@ -1,4 +1,4 @@
-# Sales-Mangement-Analysis
+# Sales-Management-Analysis
 
 ![Dashboard](Images/dashboard.png)
 
