@@ -18,7 +18,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
 
 ### *DIM_Calendar:*
 
-<!-- ```SQL
+```SQL
     SELECT 
         [DateKey], 
         [FullDateAlternateKey] AS Date, 
@@ -32,7 +32,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
         [AdventureWorksDW2019].[dbo].[DimDate]
     WHERE 
         CalendarYear >= 2019
-``` -->
+```
 
 ### *DIM_Customers:*
 
@@ -49,8 +49,8 @@ Below are the SQL statements for cleansing and transforming necessary data.
             [AdventureWorksDW2022].[dbo].[DimCustomer] as c
             LEFT JOIN dbo.dimgeography AS g ON g.geographykey = c.geographykey 
         ORDER BY 
-            CustomerKey ASC
-```
+            CustomerKey ASC 
+    ```
 
 ### *Dim_Products:* 
 
