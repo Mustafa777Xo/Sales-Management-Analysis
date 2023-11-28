@@ -32,7 +32,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
         [CalendarQuarter] AS Quarter, 
         [CalendarYear] AS Year
     FROM 
-        [AdventureWorksDW2019].[dbo].[DimDate]
+        [AdventureWorksDW2022].[dbo].[DimDate]
     WHERE 
         CalendarYear >= 2019
 ```
@@ -90,7 +90,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
         [SalesOrderNumber], 
         [SalesAmount]
     FROM 
-        [AdventureWorksDW2019].[dbo].[FactInternetSales]
+        [AdventureWorksDW2022].[dbo].[FactInternetSales]
     WHERE 
         LEFT (OrderDateKey, 4) >= YEAR(GETDATE()) -2 -- Ensures we always only bring two years of date from extraction.
     ORDER BY
