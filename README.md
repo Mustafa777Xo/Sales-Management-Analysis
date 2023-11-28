@@ -1,7 +1,9 @@
 # Sales-Mangement-Analysis
+
 ![Dashboard](Images/dashboard.png)
 
 ## Business Request & User Stories
+
 The business request for this data analyst project was an executive sales report for sales managers. Based on the request that was made from the business we following user stories were defined to fulfill delivery and ensure that acceptance criteria’s were maintained throughout the project.
 
 | As a (role) | I want (request / demand) | So that I (user value) | Acceptance Criteria |
@@ -12,6 +14,7 @@ The business request for this data analyst project was an executive sales report
 | Sales Manager   | A dashboard overview of internet sales   | Follow sales over time against budget   | A Power Bi dashboard with graphs and KPIs comparing against budget.   |
 
 ## Data Cleansing & Transformation (SQL)
+
 To create the necessary data model for doing analysis and fulfilling the business needs defined in the user stories the following tables were extracted using SQL.
 One data source (sales budgets) were provided in Excel format and were connected in the data model in a later step of the process.
 Below are the SQL statements for cleansing and transforming necessary data.
@@ -93,3 +96,18 @@ Below are the SQL statements for cleansing and transforming necessary data.
     ORDER BY
         OrderDateKey ASC
 ```
+## Data Model
+
+Below is a screenshot of the data model after cleansed and prepared tables were read into Power BI.
+This data model also shows how FACT_Budget hsa been connected to FACT_InternetSales and other necessary DIM tables.
+
+![Dashboard](Images/data_model.png)
+
+## Sales Management Dashboard
+
+The finished sales management dashboard with one page with works as a dashboard and overview, with two other pages focused on combining tables for necessary details and visualizations to show sales over time, per customers and per products.
+
+Link of the live dashboard 👇
+![Live Dashboard](https://app.powerbi.com/links/nKF1kYHUZc?ctid=125d091b-6c65-41ac-9be0-7067c1409474&pbi_source=linkShare)
+
+
