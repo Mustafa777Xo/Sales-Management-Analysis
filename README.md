@@ -48,7 +48,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
             [AdventureWorksDW2022].[dbo].[DimCustomer] as c
             LEFT JOIN dbo.dimgeography AS g ON g.geographykey = c.geographykey 
         ORDER BY 
-            CustomerKey ASC -- Ordered List by CustomerKey
+            CustomerKey ASC
 ```
 
 ### *Dim_Products:* 
