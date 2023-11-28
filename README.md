@@ -35,6 +35,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
 ```
 
 ### *DIM_Customers:*
+
     ```SQL
         SELECT 
             c.customerkey AS CustomerKey, 
@@ -52,6 +53,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
 ```
 
 ### *Dim_Products:* 
+
     ```SQL
         SELECT 
             p.[ProductKey], 
@@ -74,6 +76,7 @@ Below are the SQL statements for cleansing and transforming necessary data.
 ```
 
 ### *Fact_InternetSales:*
+
     ```SQL
         SELECT 
             [ProductKey], 
